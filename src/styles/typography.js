@@ -1,4 +1,4 @@
-import { scaleFont } from './mixins';
+import {scaleFont} from './mixins';
 
 // FONT FAMILY
 export const FONT_FAMILY_REGULAR = 'Montserrat-Regular';
@@ -30,4 +30,8 @@ export const FONT_BOLD = {
 
 export const FONT_BOLD_SEMI = {
   fontFamily: FONT_FAMILY_BOLD_SEMI,
+};
+
+export const FONT_UNDESCORE = {
+  textDecorationLine: 'underline',
 };

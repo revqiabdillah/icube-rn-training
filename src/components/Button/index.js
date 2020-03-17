@@ -1,48 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import {
-  TouchableOpacity,
-  TouchableHighlight,
-  Text
-} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {TouchableOpacity, TouchableHighlight, Text} from 'react-native';
 
-import { 
-    Colors,
-    Typography
-} from '../../styles';
+import {Colors, Typography} from '../../styles';
 
 import styles from './styles';
 
 const ButtonCustom = ({
-    type = 'outline',
-    icon = null,
-    rounded = false,
-    label,
-    click,
-    style = {}
+  type = 'outline',
+  icon = null,
+  rounded = false,
+  label,
+  click,
+  style = {},
+  labelStyle = {},
 }) => {
+  const [isActive, setIsActive] = useState(false);
 
-    const [isActive, setIsActive] = useState(false);
+  useEffect(() => {}, []);
 
-    useEffect(() => {
+  const setActive = value => {
+    setIsActive(value);
+  };
 
-    }, []);
+  const btnStyle = type === 'contained' ? styles.contained : styles.button;
+  const textBtn =
+    type === 'contained' ? styles.buttonTextActive : styles.buttonText;
 
-    const setActive = (value) => {
-        setIsActive(value);
-    }
-
-    return (
-        <TouchableHighlight
-            underlayColor={Colors.PRIMARY}
-            style={[styles.button, style]}
-            onShowUnderlay={() => setActive(true)}
-            onHideUnderlay={() => setActive(false)}
-            onPress={click}>
-            <Text style={[
-                (!isActive) ? styles.buttonText : styles.buttonTextActive
-            ]}>{label}</Text>
-        </TouchableHighlight>
-    );
-}
+  return (
+    <TouchableHighlight
+      underlayColor={Colors.PRIMARY}
+      style={[btnStyle, style]}
+      onShowUnderlay={() => setActive(true)}
+      onHideUnderlay={() => setActive(false)}
+      onPress={click}>
+      <Text style={[textBtn, labelStyle]}>{label}</Text>
+    </TouchableHighlight>
+  );
+};
 
 export default ButtonCustom;

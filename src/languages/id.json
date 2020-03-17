@@ -1,8 +1,21 @@
 {
     "translation": {
-        "welcome": "Selamat Datang",
+        "welcome": "Belanja kebutuhan sehari hari kini lebih mudah",
         "lorem": "Lorem Ipsum hanyalah teks tiruan dari industri percetakan dan penyusunan huruf.",
         "signin": "MASUK",
-        "signup": "DAFTAR"
+        "signup": "DAFTAR",
+        "language" : "Indonesia",
+        "skip" : "Lewati",
+        "forgotPassword" : "Lupa Password Anda",
+        "loginTitle" : "Jika kamu belum mempunyai akun, Jangan khawatair silahkan",
+        "fname" : "Nama Depan",
+        "lname" : "Nama Belakang",
+        "phonePlaceholder" : "Nomor Handphon +62 8",
+        "otpPlaceholder" : "Kode OTP",
+        "labelOtp" : "Kirim Kode OTP",
+        "labelVerify" : "Verifikasi",
+        "labelNewsLater" : "Berlangganan Newslater",
+        "labelAccept" :"Mohon menyetujui",
+        "labelTos" : "Syarat & Ketentuan"
     }
 }

@@ -1,8 +1,23 @@
 {
     "translation": {
-        "welcome": "Welcome",
+        "welcome": "Grocery shopping is now easier",
         "lorem": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         "signin": "Login",
-        "signup": "Register"
+        "signup": "Register",
+        "language" : "English",
+        "skip" : "Skip",
+        "forgotPassword" : "Forgot Your Password",
+        "loginTitle" : "If you don't have account, dont worry lets",
+        "emailPlaceholder" : "Email / Phone Number",
+        "passwordPlaceholder" : "Password",
+        "fname" : "First Name",
+        "lname" : "Last Name",
+        "phonePlaceholder" : "Mobile Number +62 8",
+        "otpPlaceholder" : "OTP Code",
+        "labelOtp" : "Send OTP Code",
+        "labelVerify" : "Verify",
+        "labelNewsLater" : "Subscribe Newslater",
+        "labelAccept" :"Please accept",
+        "labelTos" : "Terms & Condition"
     }
 }
