@@ -3,8 +3,15 @@ import {TextInput} from 'react-native';
 
 import styles from './styles';
 
-const ButtonSign = ({placeholder, style}) => {
+const TextField = ({
+  placeholder,
+  style,
+  onChange,
+  value,
+  keyboardType = 'default',
+}) => {
   const [isActive, setIsActive] = useState(false);
+  const [text, setText] = useState('');
 
   useEffect(() => {}, []);
 
@@ -16,8 +23,11 @@ const ButtonSign = ({placeholder, style}) => {
     <TextInput
       placeholder={placeholder}
       style={[styles.containerField, style]}
+      onChangeText={onChange ? onChange : setText}
+      value={value ? value : text}
+      keyboardType={keyboardType}
     />
   );
 };
 
-export default ButtonSign;
+export default TextField;

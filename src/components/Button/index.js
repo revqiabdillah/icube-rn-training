@@ -13,6 +13,7 @@ const ButtonCustom = ({
   click,
   style = {},
   labelStyle = {},
+  disabled = false,
 }) => {
   const [isActive, setIsActive] = useState(false);
 
@@ -29,9 +30,10 @@ const ButtonCustom = ({
   return (
     <TouchableHighlight
       underlayColor={Colors.PRIMARY}
-      style={[btnStyle, style]}
+      style={[disabled ? styles.disabled : styles.enable, btnStyle, style]}
       onShowUnderlay={() => setActive(true)}
       onHideUnderlay={() => setActive(false)}
+      disabled={disabled}
       onPress={click}>
       <Text style={[textBtn, labelStyle]}>{label}</Text>
     </TouchableHighlight>

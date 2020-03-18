@@ -3,7 +3,7 @@ import Button from '../Button';
 
 import styles from './styles';
 
-const ButtonSign = ({label, click}) => {
+const ButtonSign = ({label, click, disabled = false}) => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {}, []);
@@ -20,6 +20,7 @@ const ButtonSign = ({label, click}) => {
       style={[styles.btnSignInUp]}
       labelStyle={[styles.textBtnSignInUp]}
       type="contained"
+      disabled={disabled}
     />
   );
 };

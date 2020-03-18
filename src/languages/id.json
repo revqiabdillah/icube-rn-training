@@ -16,6 +16,12 @@
         "labelVerify" : "Verifikasi",
         "labelNewsLater" : "Berlangganan Newslater",
         "labelAccept" :"Mohon menyetujui",
-        "labelTos" : "Syarat & Ketentuan"
+        "labelTos" : "Syarat & Ketentuan",
+        "succesSendOtp" : "Request OTP Berhasil",
+        "failedSendOtp" : " Request OTP Gagal",
+        "successVerifiOtp" : "OTP Valid",
+        "failedVerifOtp" : "OTP Tidak Valid" ,
+        "timeReqOtp" : "Batas Waktu Request OTP Baru",
+        "successRegister" : "Pendaftaran Akun Berhasil"
     }
 }

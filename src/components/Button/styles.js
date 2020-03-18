@@ -37,10 +37,8 @@ export default StyleSheet.create({
   },
   contained: {
     color: Colors.WHITE,
-    backgroundColor: Colors.PRIMARY,
     ...rounded,
     ...small,
-    borderColor: Colors.PRIMARY,
   },
   buttonText: {
     ...textSmallProperty,
@@ -49,5 +47,13 @@ export default StyleSheet.create({
   buttonTextActive: {
     ...textSmallProperty,
     color: Colors.WHITE,
+  },
+  enable: {
+    backgroundColor: Colors.PRIMARY,
+    borderColor: Colors.PRIMARY,
+  },
+  disabled: {
+    backgroundColor: Colors.GRAY_MEDIUM,
+    borderColor: Colors.GRAY_MEDIUM,
   },
 });

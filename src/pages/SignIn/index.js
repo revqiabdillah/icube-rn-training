@@ -13,6 +13,8 @@ import Navbar from '../../components/Navbar';
 import Button from '../../components/ButtonSign';
 import routes from '../../navigations/routes';
 import Input from '../../components/TextField';
+import InputPasword from '../../components/TextFieldPassword';
+import {GraphUser} from '../../services/graphql';
 
 const SignIn = ({navigation}) => {
   const [username, setUsername] = React.useState('');
@@ -20,6 +22,19 @@ const SignIn = ({navigation}) => {
 
   const {signIn} = useContext(AuthContext);
   const {t, i18n} = useTranslation();
+
+  const postLogin = () => {
+    GraphUser.login({
+      username: username,
+      password: password,
+    })
+      .then(res => {
+        console.log('Res', res);
+      })
+      .catch(e => {
+        console.log('Err', e);
+      });
+  };
 
   useEffect(() => {}, []);
 
@@ -35,10 +50,18 @@ const SignIn = ({navigation}) => {
           />
         </Text>
         <View style={styles.form}>
-          <Input placeholder={t('emailPlaceholder')} />
-          <Input placeholder={t('passwordPlaceholder')} />
+          <Input
+            placeholder={t('emailPlaceholder')}
+            onChange={setUsername}
+            value={username}
+          />
+          <InputPasword
+            placeholder={t('passwordPlaceholder')}
+            onChange={setPassword}
+            value={password}
+          />
         </View>
-        <Button label={t('signin')} />
+        <Button label={t('signin')} click={postLogin} />
         <Href label={t('forgotPassword')} style={styles.hrefForgorPasswd} />
       </View>
     </View>
@@ -49,4 +72,4 @@ const mapStateToProps = state => ({
   cart: state.cart,
 });
 
-export default connect(mapStateToProps, null)(SignIn);
+export default connect(mapStateToProps)(SignIn);

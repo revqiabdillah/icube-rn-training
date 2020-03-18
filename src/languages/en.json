@@ -18,6 +18,12 @@
         "labelVerify" : "Verify",
         "labelNewsLater" : "Subscribe Newslater",
         "labelAccept" :"Please accept",
-        "labelTos" : "Terms & Condition"
+        "labelTos" : "Terms & Condition",
+        "succesSendOtp" : "Succes Request OTP",
+        "failedSendOtp" : "Failed Request OTP",
+        "successVerifiOtp" : "OTP is Valid",
+        "failedVerifOtp" : "OTP invalid" ,
+        "timeReqOtp" : "Next Request Time",
+        "successRegister" : "Success Account Registered"
     }
 }
